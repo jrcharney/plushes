@@ -16,6 +16,7 @@ Generally I hang out on the Freenode network in the ##Linux chat room, though yo
 * `wifi.sh` - Make sense of wifi, all in the command line!  (Currently only WPA Supplcant setups (essid and psk) work.  But what if you want to connect to something that doesn't use it.)
 * `flu.sh` - Make [lolcat](https://github.com/busyloop/lolcat) use the [toilet](http://caca.zoy.org/wiki/toilet). :3
 * `deli.sh` - Download a file, privately so that it doesn't appear when you type `history`.
+* `bye.sh` - A more mnemonic way to shut down and restart from the command line.
 
 Things I've been thinking about that I may or may not work on
 
@@ -39,9 +40,13 @@ Delish reqires `curl`, and possible `tar`, `unzip`, and whatever's require for `
 
 Many of these scripts may require adminstrative access so passwords may be requires to do some stuff.
 
+Bash, Sed, Awk - Use these scripts as coding examples for your scripts.
+
 ## Will any of this ever be done?
 
 It depends.  Bits and pieces over time.  Rome wasn't built in a day.
+
+I've made some good progress so far.
 
 ## Will you use anything else?
 
@@ -65,7 +70,7 @@ After we open up a new terminal (and tmux if we want to open that too), we shoul
 If you'd like to see it better, you could run one of two commands
 
 * `echo $PATH | sed -n -e 's/:/\n/g;p'`
-* 'echo $PATH | tr ':' '\n'`
+* `echo $PATH | tr ':' '\n'`
 
 If you run one of those commands, you can better understand the order of which Linux accepts which programs to run.  Programs that run in `~/bin` will take higher precidence over what we add to our dot files (like `/opt/` directories), then the '/usr/local' directories (except for `/usr/local/games/`), then then our `/usr/` directories (`/usr/sbin` and `/usr/bin` but not `/usr/games`), then `/sbin` and `/bin`, then those games directories.
 

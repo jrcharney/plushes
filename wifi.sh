@@ -313,11 +313,36 @@ get_siglevel(){
 # Func: tablefy
 # Info: Take in all that better_scan stuff and process it into a table.
 # TODO: Scecurity blocks are not included
+#
+#		       +--> get_index    --> idxp     --+
+#		       |                                |
+#		       +--> get_ipaddr   --> ipaddrp  --+
+#		       |                                |
+#		       +--> get_essid    --> essidp   --+
+#		       |                                |
+#		       +--> get_proto    --> protop   --+
+#		       |                                |
+#		       +--> get_mode     --> modep    --+
+#		       |                                |
+# better_scan -> tee --+--> get_freqch   --> freqchp  --+--> paste -> gawk
+#		       |                                |
+#		       +--> get_enckey   --> enckeyp  --+
+#		       |                                |
+#		       +--> get_bitrate  --> bitratep --+
+#		       |                                |
+#		       +--> get_quality  --> qualityp --+
+#		       |                                |
+#		       +--> get_siglevel --> levelp   --+
+#		       |
+#		       +--> (get_sec?)					Not sure if I should add the security section
+#		       |
+#		       +--> /dev/null
+#
 tablefy(){
 	mkfifo idxp ipaddrp essidp protop modep freqchp enckeyp bitratep qualityp levelp	# secuirtyp
 	trap "rm -f idxp ipaddrp essidp protop modep freqchp enckeyp bitratep qualityp levelp" EXIT HUP QUIT INT KILL TERM
 	
-	# TODO: Apply a header!
+	# The header is applied elsewhere
 	while IFS= read -r line; do echo "${line}"; done \
 	| tee \
 		>(get_index    > idxp ) \

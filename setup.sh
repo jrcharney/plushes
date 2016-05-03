@@ -1,7 +1,7 @@
 #!/bin/bash
 # File: setup.sh
 # Author: Jason Charney, BSCS (jrcharneyATgmailDOTcom)
-# Info: Create all the softlinks in the PLUSHES project to put in ~/bash
+# Info: Create all the softlinks in the PLUSHES project to put in ~/bin
 # Date: 2 May 2016
 
 printf "PLUSHES: Power Linux User SHEll Scripts\n\n"
