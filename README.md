@@ -50,3 +50,33 @@ I could use something that uses Python, Ruby, C/C++, or Java.  Maybe some LaTeX 
 ## Why do any of this [insert program here] exists?
 
 Because I can, and I need to clean up a lot of my repos.  Decommission some stuff. Put some things together. Impress people. That kinda stuff.
+
+## To make this all work
+
+In `~/profile', there should be a few lines that state that if `~/bin` is created, it is added to `$PATH`.  To get it working, we need to create that directory and then close the terminal (and terminal multiplexer if you are using that too), then start it up again.
+
+```
+$ mkdir ~/bin
+$ exit
+```
+
+After we open up a new terminal (and tmux if we want to open that too), we should notice that `/home/$USER/bin` added to the beginning of `$PATH` where `$USER` is your user name.
+
+If you'd like to see it better, you could run one of two commands
+
+* `echo $PATH | sed -n -e 's/:/\n/g;p'`
+* 'echo $PATH | tr ':' '\n'`
+
+If you run one of those commands, you can better understand the order of which Linux accepts which programs to run.  Programs that run in `~/bin` will take higher precidence over what we add to our dot files (like `/opt/` directories), then the '/usr/local' directories (except for `/usr/local/games/`), then then our `/usr/` directories (`/usr/sbin` and `/usr/bin` but not `/usr/games`), then `/sbin` and `/bin`, then those games directories.
+
+I prefer to put git projects that are not mine and that I am not forking into a directory called `~/Software`.  The ones that I do create or fork are put into `~/Projects`.  It's a good practice in my opinion for this next step to get things going.
+
+```
+$ [ ! -d ~/Software ] && mkdir ~/Software			# Create this directory if it doesn't exist.
+$ cd ~/Software							# Go to that directory
+$ git clone https://github.com/jrcharney.com/plushes		# Clone this repo into the ~/Software directory
+$ cd plushes							# Got to the plushes directory
+$ ./startup.sh							# Run this script!
+```
+
+So what does startup do?  Create `~/bin` if it doesn't exists. It also creates all the soft links in plushes that would go in `~/bin`
