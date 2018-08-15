@@ -17,8 +17,12 @@ Generally I hang out on the Freenode network in the ##Linux chat room, though yo
 * `flu.sh` - Make [lolcat](https://github.com/busyloop/lolcat) use the [toilet](http://caca.zoy.org/wiki/toilet). :3
 * `deli.sh` - Download a file, privately so that it doesn't appear when you type `history`.
 * `bye.sh` - A more mnemonic way to shut down and restart from the command line.
+* `zippy.sh` - If you have an account with the United States Postal Service, `zippy` will get zip code data. It requires creating an API key. zippy will store this information in a file called `.zippyrc`
 
-Things I've been thinking about that I may or may not work on
+## Comming Soon
+* MOTD scripting! - create a Message-of-the-Day (MOTD) that loads when you start up your system or login to SSH. I'd eventually like to create a warning prompt (which is more of a MOTD) before you log in. This is used to warn intruders to keep out, but it's also a creative way of showing information about your computer when loggin in.
+
+## Things I've been thinking about that I may or may not work on
 
 * A script that is a companion to `deli.sh` that does other thing clandestinely (moving, renaming, copying, etc.)
 * A script that finds files that isn't as complicated as using `find` or `grep`.
@@ -29,6 +33,12 @@ Things I've been thinking about that I may or may not work on
 * Develop or find some super-light browser that let's you tinker with a JavaScript, CSS3, HTML5, and Canvas browser that doesn't eat up resources. (ARM users, you know you want than!)
 * A script that gets Spotify set up for textual interfaces. (There are programs that do this, but I just want to get it set up. This might be part of my Hacktop project along with the SDR idea.)
 * A few script that promote some lesser known programs that do some cool stuff.
+
+## Projects not by me that you should check out.
+* [cheat.sh](https://github.com/chubin/cheat.sh) - "The only cheat sheet you need". Curl help for learning how to code.
+* [rate.sx](https://github.com/chubin/rate.sx) - Curl Cryptocurrencies exchange rates. Even if you aren't into cryptocurrenies, you have to admit this is a beautiful demonstration of the power of command line! Using braile characters to act as block characters for drawing charts!
+* [lolcat](https://github.com/busyloop/lolcat/) - "Rainbows and unicorns!" 256 blended color cat command. This is why you need to set your terminal to 256 colors!
+* [Winds](https://github.com/GetStream/Winds) - Open Source RSS & Podcast App powered by GetStrea.io. RSS is back!
 
 ## Requirements
 
