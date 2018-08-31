@@ -175,7 +175,10 @@ EOF
         echo "ERR"    # Some other Error. Rather than leave it blank, investigate what went wrong.
       fi
     else
-      echo "$res" | sed -n -e 's/.*<Zip5>\([0-9]\+\)<\/Zip5><Zip4>\([0-9]\+\)<\/Zip4>.*/\1-\2/g;p'    # This should happen.
+      echo "$res" \
+        | sed -n -e 's/.*<Zip5>\([0-9]\+\)<\/Zip5><Zip4>\([0-9]\+\)<\/Zip4>.*/\1-\2/g;p' \
+        | sed -n -e '/<Zip4\/>/s:.*<Zip5>\([0-9]\+\)</Zip5><Zip4/>.*:\1:g;p'
+        # This should happen. (That second line was added because some addresses don't have zip4s!
       #echo "$res" | sed -n -e 's/.*<Zip5>\([0-9]\+\)<\/Zip5>.*/\1/g;p'    # Do this if you just want the five digits instead of the five+four
     fi
   else
@@ -294,7 +297,10 @@ case $# in
       help ) usage ; exit 0;;
       *) 
         # TODO: What if an address is quoted?
-        echo "Invalid entry. Type 'help' for usage."; exit 1 ;;
+        echo "Invalid entry. Type 'help' for usage."; 
+        echo "Did you put your address in quotes? If so, try unquoting it."
+        exit 1 
+        ;;
     esac
     ;;
   #2) TODO: read a file full of addresses.
