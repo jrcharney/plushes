@@ -3,13 +3,45 @@ Plushes
 
 PLUSHES (Power Linux User SHEll Scripts)
 
-Plushes is a series of Bash scripts that make using things easy.
+Plushes is a series of Bash scripts (and eventually Python Scripts) that make using things easy.
 
-Plushes are what I like to call "kitchen sink scripts".  Linux gives you all sorts of tools to work with to do stuff with, but nothing practical to do things like enable Wifi
+Plushes are what I like to call "kitchen sink scripts".  Linux gives you all sorts of tools to work with to do stuff with, but nothing practical to do things like enable Wifi.
+
+## Why should I trust you, Jason?
+
+There is kind of an exclusion barrier on Linux, namely because Linux is not Windows or Mac. No "nerds at the genius bar" to fix what you break. Which to be honest, the only time you should need to see them if is if it is a major hardware issue.
+
+If you are a "normal" user who doesn't code, who has no interested in coding, has no patience, or just don't like to solve puzzle or fix things yourself, you're not going to like Linux.  For those who want to try, Plushes can help.
+
+I write these things because I like to translate Nerd into English and because a lot of nerds write stuff like the expect you to know what is in their head.  Do you have time to interpolate a data into a Pivot Table in Microsoft Excel?
+
+**If your answered *"What?"* Then I'm your guy.**
+
+(BTW, that is just Nerd for "Insert data into a Pivot Table into Excel to make a graph out of something."  I think.)
 
 ## Meet Me Here on IRC!
 
-Generally I hang out on the Freenode network in the ##Linux chat room, though you could also catch me in #bash or #RaspberryPi.
+Generally I hang out on the Freenode network in the ##Linux chat room, though you could also catch me in #bash or #RaspberryPi.  I haven't been hanging around there as much these days, what with Slack being such a big thing.
+
+I've been trying to score enough points to ask questions on Stack Overflow.
+
+## Support Plushes!
+
+Plushes is currently my most active Github repo as of late.  It's given me something to do while a find a better job than the one I have.  **Until then, [support Plushes by tossing in a few bucks into my Ko-Fi cup!](https://ko-fi.com/jrcharney)**
+
+## If you happen to have a tech job in the St. Louis Area...
+
+Hey! Are you in the St. Louis, Missouri area?  Do you work for some kind of tech company in the St. Louis Area?
+
+I like being here!  I hate getting phone calls from randos who want me to move out of town. I'm too broke to leave at the moment.  In fact, I take the bus to work.
+
+If you have a job that I can do that has me doing this kind of stuff for a living, and you're not some rando looking for me to work at some "secret clearance" government job at a place like Boeing, Scott Air Force Base, or the Natioanl Personal Records Center, then you have my attention.
+
+I don't have any problem working for the government, just the parts that want me to not talk about work and that spend billions blowing up villages and incarcerating children in baby internment camps to "Make America Great Again".
+
+Basically, if you aren't from some agency in the U.S. Department of Commerce (like the National Weather Service or Census Bureau), I don't want to talk to you.
+
+However, if you are from a local tech company (World Wide Technoligies, Asynchrony, Graybar, etc.), or the Department of Commerce (we got that Census 2020 coming up), please for the love of Dennis Ritchie, contact me!
 
 ## Scripts
 
@@ -18,9 +50,12 @@ Generally I hang out on the Freenode network in the ##Linux chat room, though yo
 * `deli.sh` - Download a file, privately so that it doesn't appear when you type `history`.
 * `bye.sh` - A more mnemonic way to shut down and restart from the command line.
 * `zippy.sh` - If you have an account with the United States Postal Service, `zippy` will get zip code data. It requires creating an API key. zippy will store this information in a file called `.zippyrc`
+* `geocoord.sh` - Probably a better program than `zippy`. It uses data from the US Census Bureau to fetch coordinates of place. This app will also let you find zip codes if you don't know the city and find cities if you don't if you just have the address and zip code. It's still a bit beta because it still requires a little bit of user intervention (see `zippy.sh help` as to why.)
 
 ## Comming Soon
 * MOTD scripting! - create a Message-of-the-Day (MOTD) that loads when you start up your system or login to SSH. I'd eventually like to create a warning prompt (which is more of a MOTD) before you log in. This is used to warn intruders to keep out, but it's also a creative way of showing information about your computer when loggin in.
+
+* A new `weather.sh` script that gets data from the National Weather Service rather than Accuweather. (FREE GOVERNMENT STUFF!)
 
 ## Things I've been thinking about that I may or may not work on
 
@@ -32,6 +67,9 @@ Generally I hang out on the Freenode network in the ##Linux chat room, though yo
 * Mandelbrot and Julia stuff. (I really want to do some fun fractal stuff.)
 * Develop or find some super-light browser that let's you tinker with a JavaScript, CSS3, HTML5, and Canvas browser that doesn't eat up resources. (ARM users, you know you want than!)
 * A script that gets Spotify set up for textual interfaces. (There are programs that do this, but I just want to get it set up. This might be part of my Hacktop project along with the SDR idea.)
+* A script that sets up `zsh` the right way. (Don't use antigen explicity! Use Zplug!)
+* A script that sets up `vim` the right way. (Plugins make everything better. Also a better `.vimrc` for root. I really want to see EditConfig and some sort of auto complete be used.)
+* A script that sets up `i3-gaps` for Debian systems (Great for Hacktops if you use Raspbian. Why should those Arch Linux nerds have all the fun?!)
 * A few script that promote some lesser known programs that do some cool stuff.
 
 ## Projects not by me that you should check out.
