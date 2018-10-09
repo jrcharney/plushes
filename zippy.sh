@@ -189,7 +189,7 @@ EOF
   # <Error><Number>80040B19</Number><Description>XML Syntax Error: Please check the XML request to see if it can be parsed.</Description><Source>USPSCOM::DoAuth</Source></Error>
   # If it is a bad address, it reponse with this
   # <ZipCodeLookupResponse><Address ID="1"><Error><Number>-2147219401</Number><Source>clsAMS</Source><Description>Address Not Found.  </Description><HelpFile/><HelpContext/></Error></Address></ZipCodeLookupResponse>
-  # <ZipCodeLookupResponse><Address ID="1"><Address2>2920 CHURCHILL DR</Address2><City>FLORISSANT</City><State>MO</State><Zip5>63033</Zip5><Zip4>1114</Zip4></Address></ZipCodeLookupResponse>
+  # <ZipCodeLookupResponse><Address ID="1"><Address2>911 WASHINGTON AV</Address2><City>SAINT LOUIS</City><State>MO</State><Zip5>63101</Zip5><Zip4>1243</Zip4></Address></ZipCodeLookupResponse>
   # So we can apply this sed filter
   #  | sed -n -e '2{s/.*<Zip5>\([0-9]\+\)<\/Zip5><Zip4>\([0-9]\+\)<\/Zip4>.*/\1-\2/g;p}'
 }
