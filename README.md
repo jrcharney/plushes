@@ -73,6 +73,7 @@ However, if you are from a local tech company (World Wide Technoligies, Asynchro
 * A few script that promote some lesser known programs that do some cool stuff.
 
 ## Projects not by me that you should check out.
+* [gitignore.io](https://gitignore.io/) - Need help setting up your `.gitignore` file? Give them a try.
 * [cheat.sh](https://github.com/chubin/cheat.sh) - "The only cheat sheet you need". Curl help for learning how to code.
 * [rate.sx](https://github.com/chubin/rate.sx) - Curl Cryptocurrencies exchange rates. Even if you aren't into cryptocurrenies, you have to admit this is a beautiful demonstration of the power of command line! Using braile characters to act as block characters for drawing charts!
 * [lolcat](https://github.com/busyloop/lolcat/) - "Rainbows and unicorns!" 256 blended color cat command. This is why you need to set your terminal to 256 colors!
