@@ -51,8 +51,9 @@ However, if you are from a local tech company (World Wide Technoligies, Asynchro
 * `bye.sh` - A more mnemonic way to shut down and restart from the command line.
 * `zippy.sh` - If you have an account with the United States Postal Service, `zippy` will get zip code data. It requires creating an API key. zippy will store this information in a file called `.zippyrc`
 * `geocoord.sh` - Probably a better program than `zippy`. It uses data from the US Census Bureau to fetch coordinates of place. This app will also let you find zip codes if you don't know the city and find cities if you don't if you just have the address and zip code. It's still a bit beta because it still requires a little bit of user intervention (see `zippy.sh help` as to why.)
+* `rw.sh` - Random Wallpaper. If you are using `i3` and have `feh`, you can use this script to choose a file in your Wallpaper directory. My wallpaper directory is `~/Pictures/Wallpaper`. Eventually I'll set up something to ask you weabout a dot file to set that the default wallpaper directory.
 
-## Comming Soon
+## Coming Soon
 * MOTD scripting! - create a Message-of-the-Day (MOTD) that loads when you start up your system or login to SSH. I'd eventually like to create a warning prompt (which is more of a MOTD) before you log in. This is used to warn intruders to keep out, but it's also a creative way of showing information about your computer when loggin in.
 
 * A new `weather.sh` script that gets data from the National Weather Service rather than Accuweather. (FREE GOVERNMENT STUFF!)
